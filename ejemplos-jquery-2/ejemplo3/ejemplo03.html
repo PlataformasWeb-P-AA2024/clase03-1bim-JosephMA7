@@ -25,12 +25,14 @@
                 console.log(data[i]);
                 console.log(data[i].Code);
                 console.log(data[i].Name);
+                //append sube la informacion al html
                 $('#mensajeFinal').append("<p> <b>Código:</b> "+ data[i].Code + " <b>Nombre:</b> " + data[i].Name + "</p>");
               }
             });      
       });
       
       $( "#limpiarInformacion" ).click(function() {
+        //el empty sirve para borrar 
           $('#mensajeFinal').empty();
       });
     });
