@@ -1,5 +1,5 @@
 # Acceder al archivo CSV
-archivo = open('Listado-Instituciones-Educativas-distribuidas-por-zona-distrito-y-circuito.csv', "r")
+archivo = open('Listado-Instituciones-Educativas-distribuidas-por-zona-distrito-y-circuito.csv', "r", encoding="utf-8")
 
 # Obtener las líneas del archivo
 lineas = archivo.readlines()
@@ -38,7 +38,7 @@ for linea in lineas[1:]:
     </head>
     <body>
         <div class="container">
-            <h1>Información de la Institución Educativa</h1>
+            <h1>Información de la Institución</h1>
             <p class="campo">%s:</p> <p>%s</p>
             <p class="campo">%s:</p> <p>%s</p>
             <p class="campo">%s:</p> <p>%s</p>
@@ -50,12 +50,15 @@ for linea in lineas[1:]:
             <p class="campo">%s:</p> <p>%s</p>
             <p class="campo">%s:</p> <p>%s</p>
             <p class="campo">%s:</p> <p>%s</p>
-            
+            <p class="campo">%s:</p> <p>%s</p>
+            <p class="campo">%s:</p> <p>%s</p>
         </div>
     </body>
     </html>
-    """ % (encabezados[0], campos[0],encabezados[1], campos[1], encabezados[2], campos[2],encabezados[3], campos[3],encabezados[4], campos[4],encabezados[5], campos[5],encabezados[6], campos[6],
-        encabezados[7], campos[7],encabezados[13], campos[13],encabezados[14], campos[14],encabezados[15], campos[15])
+    """ % (encabezados[0], campos[0],encabezados[1], campos[1], encabezados[2], campos[2],encabezados[3], campos[3],
+        encabezados[4], campos[4],encabezados[5], campos[5],encabezados[6], campos[6],
+        encabezados[7], campos[7],encabezados[8], campos[8],encabezados[9], campos[9],
+        encabezados[13], campos[13],encabezados[14], campos[14],encabezados[15], campos[15])
 
     # Obtener el nombre del archivo HTML (usando el primer campo como nombre)
     nombre_archivo = "resultados/%s.html" % campos[0]
